@@ -1,0 +1,124 @@
+{
+  "works": [
+    {
+      "id": 1,
+      "title": "Modern E-commerce Platform",
+      "description": "A fully responsive e-commerce platform built with React and Node.js, featuring real-time inventory management and seamless payment integration.",
+      "imageUrl": "https://picsum.photos/seed/ecom/600/400",
+      "clientUrl": "https://example.com/ecommerce",
+      "isVisible": true,
+      "createdAt": "2024-01-15T08:00:00.000Z",
+      "updatedAt": "2024-10-29T17:30:47.932Z"
+    },
+    {
+      "id": 2,
+      "title": "Healthcare Management System",
+      "description": "Custom healthcare platform for managing patient records, appointments, and medical history with strict HIPAA compliance.",
+      "imageUrl": "https://picsum.photos/seed/health/600/400",
+      "clientUrl": "https://example.com/healthcare",
+      "isVisible": true,
+      "createdAt": "2024-01-20T10:30:00.000Z",
+      "updatedAt": "2024-10-29T16:29:30.932Z"
+    },
+    {
+      "id": 3,
+      "title": "Real Estate Visualization App",
+      "description": "Interactive 3D property visualization tool with virtual tours and real-time pricing updates for luxury real estate market.",
+      "imageUrl": "https://picsum.photos/seed/realestate/600/400",
+      "clientUrl": "https://example.com/realestate",
+      "isVisible": true,
+      "createdAt": "2024-02-01T09:15:00.000Z",
+      "updatedAt": "2024-02-01T09:15:00.000Z"
+    },
+    {
+      "id": 4,
+      "title": "Educational Learning Platform",
+      "description": "Online learning platform with interactive courses, progress tracking, and personalized learning paths for K-12 students.",
+      "imageUrl": "https://picsum.photos/seed/edu/600/400",
+      "clientUrl": "https://example.com/education",
+      "isVisible": true,
+      "createdAt": "2024-02-15T14:20:00.000Z",
+      "updatedAt": "2024-10-29T17:44:51.230Z"
+    },
+    {
+      "id": 5,
+      "title": "Financial Dashboard",
+      "description": "Real-time financial analytics dashboard with predictive modeling and automated reporting for investment firms.",
+      "imageUrl": "https://picsum.photos/seed/finance/600/400",
+      "clientUrl": "https://example.com/finance",
+      "isVisible": true,
+      "createdAt": "2024-03-01T11:45:00.000Z",
+      "updatedAt": "2024-03-01T11:45:00.000Z"
+    },
+    {
+      "id": 6,
+      "title": "Social Media Analytics Tool",
+      "description": "Comprehensive social media management and analytics platform for tracking engagement and campaign performance.",
+      "imageUrl": "https://picsum.photos/seed/social/600/400",
+      "clientUrl": "https://example.com/social",
+      "isVisible": true,
+      "createdAt": "2024-03-10T16:30:00.000Z",
+      "updatedAt": "2024-03-10T16:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "title": "Fitness Tracking Application",
+      "description": "Mobile-first fitness tracking app with personalized workout plans, nutrition tracking, and social features.",
+      "imageUrl": "https://picsum.photos/seed/fitness/600/400",
+      "clientUrl": "https://example.com/fitness",
+      "isVisible": true,
+      "createdAt": "2024-03-20T13:25:00.000Z",
+      "updatedAt": "2024-03-20T13:25:00.000Z"
+    },
+    {
+      "id": 8,
+      "title": "Event Management System",
+      "description": "Comprehensive event planning and management platform with ticketing, scheduling, and attendee tracking features.",
+      "imageUrl": "https://picsum.photos/seed/event/600/400",
+      "clientUrl": "https://example.com/events",
+      "isVisible": false,
+      "createdAt": "2024-04-01T09:00:00.000Z",
+      "updatedAt": "2024-10-29T16:58:16.854Z"
+    },
+    {
+      "id": 9,
+      "title": "Travel Booking Platform",
+      "description": "All-in-one travel booking platform with AI-powered recommendations and real-time pricing comparisons.",
+      "imageUrl": "https://picsum.photos/seed/travel/600/400",
+      "clientUrl": "https://example.com/travel",
+      "isVisible": true,
+      "createdAt": "2024-04-10T15:40:00.000Z",
+      "updatedAt": "2024-10-29T17:19:57.334Z"
+    },
+    {
+      "id": 10,
+      "title": "Restaurant Management System",
+      "description": "Complete restaurant management solution with POS integration, inventory tracking, and customer relationship management.",
+      "imageUrl": "https://picsum.photos/seed/restaurant/600/400",
+      "clientUrl": "https://example.com/restaurant",
+      "isVisible": true,
+      "createdAt": "2024-04-20T12:10:00.000Z",
+      "updatedAt": "2024-04-20T12:10:00.000Z"
+    },
+    {
+      "title": "TEST",
+      "description": "ASDSADASAS",
+      "imageUrl": "http://localhost:3000/uploads/3d0b151c-cec0-40da-9c73-9395fdb7804d.png",
+      "clientUrl": "http://www.g.ro",
+      "isVisible": true,
+      "id": 11,
+      "createdAt": "2024-10-29T16:44:43.892Z",
+      "updatedAt": "2024-10-29T16:44:55.191Z"
+    },
+    {
+      "title": "test",
+      "description": "asdsa",
+      "imageUrl": "http://localhost:3000/uploads/cddb9c20-b3bd-4c78-90d3-392528ad3ca3.jpg",
+      "clientUrl": "http://www.g.ro",
+      "isVisible": false,
+      "id": 12,
+      "createdAt": "2024-10-29T16:55:17.825Z",
+      "updatedAt": "2024-10-29T17:46:20.388Z"
+    }
+  ]
+}
