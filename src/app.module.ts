@@ -18,7 +18,7 @@ import configuration from './config/configuration';
     }),
     WorksModule,
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', process.env.UPLOAD_DIR || 'uploads'),
+      rootPath: process.env.UPLOAD_DIR || join(__dirname, '..', 'uploads'),
       serveRoot: '/uploads',
     }),
   ]
