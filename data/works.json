@@ -6,9 +6,9 @@
       "description": "A fully responsive e-commerce platform built with React and Node.js, featuring real-time inventory management and seamless payment integration.",
       "imageUrl": "https://picsum.photos/seed/ecom/600/400",
       "clientUrl": "https://example.com/ecommerce",
-      "isVisible": true,
+      "isVisible": false,
       "createdAt": "2024-01-15T08:00:00.000Z",
-      "updatedAt": "2024-10-29T17:30:47.932Z"
+      "updatedAt": "2024-10-30T07:49:48.272Z"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "clientUrl": "https://example.com/healthcare",
       "isVisible": true,
       "createdAt": "2024-01-20T10:30:00.000Z",
-      "updatedAt": "2024-10-29T16:29:30.932Z"
+      "updatedAt": "2024-10-30T07:49:08.560Z"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "clientUrl": "https://example.com/realestate",
       "isVisible": true,
       "createdAt": "2024-02-01T09:15:00.000Z",
-      "updatedAt": "2024-02-01T09:15:00.000Z"
+      "updatedAt": "2024-10-30T07:49:09.745Z"
     },
     {
       "id": 4,
