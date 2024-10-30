@@ -16,9 +16,9 @@ import { FileInterceptor } from '@nestjs/platform-express';
 import { WorksService } from './works.service';
 import { Work } from './work.entity';
 import { diskStorage } from 'multer';
-import { extname } from 'path';
+import { extname, join } from 'path';
 import { Express } from 'express';
-
+import { ConfigService } from '@nestjs/config';
 
 interface FileUploadResponse {
   url: string;
@@ -34,25 +34,33 @@ const imageFileFilter = (req: any, file: Express.Multer.File, callback: Function
   callback(null, true);
 };
 
-// Configurare storage pentru multer
-const multerConfig = {
-  storage: diskStorage({
-    destination: './uploads',
-    filename: (req: any, file: Express.Multer.File, callback: Function) => {
-      const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`;
-      const ext = extname(file.originalname);
-      callback(null, `${uniqueSuffix}${ext}`);
-    }
-  }),
-  fileFilter: imageFileFilter,
-  limits: {
-    fileSize: 5 * 1024 * 1024 // 5MB limit
-  }
-};
-
 @Controller('works')
 export class WorksController {
-  constructor(private readonly worksService: WorksService) {}
+  private multerConfig;
+
+  constructor(
+    private readonly worksService: WorksService,
+    private readonly configService: ConfigService
+  ) {
+    // Configurare dinamică pentru multer bazată pe environment
+    this.multerConfig = {
+      storage: diskStorage({
+        destination: (req: any, file: Express.Multer.File, callback: Function) => {
+          const uploadPath = this.configService.get('UPLOAD_DIR') || './uploads';
+          callback(null, uploadPath);
+        },
+        filename: (req: any, file: Express.Multer.File, callback: Function) => {
+          const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`;
+          const ext = extname(file.originalname);
+          callback(null, `${uniqueSuffix}${ext}`);
+        }
+      }),
+      fileFilter: imageFileFilter,
+      limits: {
+        fileSize: 5 * 1024 * 1024 // 5MB limit
+      }
+    };
+  }
 
   @Get()
   async findAll(): Promise<Work[]> {
@@ -112,14 +120,16 @@ export class WorksController {
   }
 
   @Post('upload')
-  @UseInterceptors(FileInterceptor('image', multerConfig))
+  @UseInterceptors(FileInterceptor('image'))
   async uploadFile(@UploadedFile() file: Express.Multer.File): Promise<FileUploadResponse> {
     if (!file) {
       throw new BadRequestException('No file uploaded');
     }
 
-    const apiUrl = process.env.API_URL || 'http://localhost:3000';
-    const fileUrl = `${apiUrl}/uploads/${file.filename}`;
+    const apiUrl = this.configService.get('API_URL');
+    // Asigură-te că URL-ul nu are slash dublu
+    const baseUrl = apiUrl.endsWith('/') ? apiUrl.slice(0, -1) : apiUrl;
+    const fileUrl = `${baseUrl}/uploads/${file.filename}`;
 
     return {
       url: fileUrl
