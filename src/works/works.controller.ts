@@ -17,6 +17,8 @@ import { WorksService } from './works.service';
 import { Work } from './work.entity';
 import { diskStorage } from 'multer';
 import { extname } from 'path';
+import { Express } from 'express';
+
 
 interface FileUploadResponse {
   url: string;
